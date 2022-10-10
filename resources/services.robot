@@ -11,8 +11,27 @@ POST Partner
     [Arguments]     ${payload}
 
     ${response}     POST        ${BASE_URL}     
-    ...            json=${payload}
-    ...            headers=${HEADER}
-    ...            expected_status=any
+    ...             json=${payload}
+    ...             headers=${HEADER}
+    ...             expected_status=any
+
+    [Return]        ${response}
+
+GET Partners
+    ${response}     GET        ${BASE_URL}     
+    ...             headers=${HEADER}
+    ...             expected_status=any
+
+    [Return]        ${response}
+
+Busca Partners
+    [Arguments]     ${nome}
+
+    ${query}        Create Dictionary       name=${nome}
+
+    ${response}     GET        ${BASE_URL}
+    ...             params=${query}
+    ...             headers=${HEADER}
+    ...             expected_status=any
 
     [Return]        ${response} 
