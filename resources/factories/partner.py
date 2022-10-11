@@ -40,3 +40,12 @@ def cria_lista_parceiros():
         }
     ]
     return lista_parceiros
+
+def habilita_parceiro():
+    partner = {
+        'name': 'Restaturante do Papito',
+        'email': 'contato@alguma.com.br',
+        'whatsapp': '11123456789',
+        'business': 'Restaurante'
+    }
+    return partner

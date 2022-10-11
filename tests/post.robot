@@ -22,9 +22,7 @@ Deve retornar que já existe o parceiro
 
     ${parceiro}      Cria parceiro duplicado
     
-    Apaga parceiro pelo nome    ${parceiro}[name]
-    
-    POST Partner        ${parceiro}
+    Cria um novo parceiro   ${parceiro}
 
     ${response}     POST Partner        ${parceiro}
 

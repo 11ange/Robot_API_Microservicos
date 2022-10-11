@@ -34,4 +34,22 @@ Busca Partners
     ...             headers=${HEADER}
     ...             expected_status=any
 
+    [Return]        ${response}
+
+Habilita Partners
+    [Arguments]     ${partner_id}
+
+    ${response}     PUT        ${BASE_URL}/${partner_id}/enable
+    ...             headers=${HEADER}
+    ...             expected_status=any
+
+    [Return]        ${response}
+
+Desabilita Partners
+    [Arguments]     ${partner_id}
+
+    ${response}     PUT        ${BASE_URL}/${partner_id}/disable
+    ...             headers=${HEADER}
+    ...             expected_status=any
+
     [Return]        ${response} 
