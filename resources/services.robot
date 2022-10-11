@@ -52,4 +52,13 @@ Desabilita Partners
     ...             headers=${HEADER}
     ...             expected_status=any
 
+    [Return]        ${response}
+
+Apaga Partners
+    [Arguments]     ${partner_id}
+
+    ${response}     DELETE        ${BASE_URL}/${partner_id}
+    ...             headers=${HEADER}
+    ...             expected_status=any
+
     [Return]        ${response} 

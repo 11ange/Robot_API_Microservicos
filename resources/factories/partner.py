@@ -49,3 +49,12 @@ def habilita_parceiro():
         'business': 'Restaurante'
     }
     return partner
+
+def apaga_parceiro():
+    partner = {
+        'name': 'Adega do Papito',
+        'email': 'contato@adega.com.br',
+        'whatsapp': '44123456789',
+        'business': 'Conveniência'
+    }
+    return partner
